@@ -6,7 +6,7 @@ const resolvers = require("./graphql/resolvers");
 
 // const MONGODB = "mongodb+srv://admin:coopercodes@apolloserversetup.n9ghj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const MONGODB =
-  "mongodb://localhost:27017/?readPreference=primary&directConnection=true&ssl=false";
+  "mongodb+srv://stailzsanchez:ghjcnjnfr@cluster0.cslchur.mongodb.net/?retryWrites=true&w=majority";
 
 const server = new ApolloServer({
   typeDefs,
