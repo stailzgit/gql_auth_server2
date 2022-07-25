@@ -13,13 +13,9 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   csrfPrevention: true,
-  cache: "bounded",
   cors: {
-    origin: [
-      "https://www.your-app.example",
-      "https://studio.apollographql.com",
-      "https://gql-auth-server.herokuapp.com/",
-    ],
+    origin: "*",
+    credentials: true,
   },
 });
 
