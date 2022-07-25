@@ -12,18 +12,18 @@ const MONGODB =
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  // csrfPrevention: true,
-  // cache: "bounded",
-  // cors: {
-  //   origin: [
-  //     "https://www.your-app.example",
-  //     "https://studio.apollographql.com",
-  //     "https://gql-auth-server.herokuapp.com/",
-  //   ],
-  // },
+  csrfPrevention: true,
+  cache: "bounded",
+  cors: {
+    origin: [
+      "https://www.your-app.example",
+      "https://studio.apollographql.com",
+      "https://gql-auth-server.herokuapp.com/",
+    ],
+  },
 });
 
 mongoose.connect(MONGODB, { useNewUrlParser: true }).then(() => {
   console.log("MongoDB Connected");
-  server.listen(() => console.log(`Server started on port - ${PORT}`));
+  server.listen(PORT, () => console.log(`Server started on port - ${PORT}`));
 });
